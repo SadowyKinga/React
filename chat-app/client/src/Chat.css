@@ -1,0 +1,185 @@
+body{
+  font-family: 'Montserrat', sens-serif;
+  height: 100%;
+}
+
+.chatBox{
+  position: absolute;
+  right: 1%;
+  margin: auto;
+  padding: 20px;
+  padding-left: 0;
+  width: 25%;
+  bottom: 10%;
+}
+
+.contentBody {
+  height: calc(100vh - calc(100vh / 2));
+  overflow: auto;
+}
+
+.chatMy {
+  padding: 1em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  transform: scale(0);
+  transform-origin: right;
+  animation-name: showIn;
+  animation-duration: 0.2s; /* or: Xms */
+  animation-iteration-count: 1;
+  animation-direction: normal; /* or: normal */
+  animation-timing-function: cubic-bezier(
+    0.88,
+    0.19,
+    0.37,
+    1.11
+  ); /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+  animation-fill-mode: both; /* or: backwards, both, none */
+  animation-delay: 0.2s; /* or: Xms */
+  }
+  
+  @keyframes showIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.chatItemContentMy {
+  background-color: #14286e;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px 10px 0 10px;
+  max-width: 50%;
+  min-width: auto;
+}
+
+.chatItemContentMy .chatDate {
+  justify-content: space-between;
+  display: flex;
+  margin-top: 10px;
+  justify-content: flex-end;
+
+}
+
+.chatItemContentMy .chatDate span {
+  font-size: 14px;
+  color: rgb(197, 194, 194);
+  user-select: none;
+}
+
+.chatGuest{
+  padding: 1em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  transform: scale(0);
+  transform-origin: left;
+  animation-name: showIn;
+  animation-duration: 0.2s; /* or: Xms */
+  animation-iteration-count: 1;
+  animation-direction: normal; /* or: normal */
+  animation-timing-function: cubic-bezier(
+    0.88,
+    0.19,
+    0.37,
+    1.11
+  ); /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+  animation-fill-mode: both; /* or: backwards, both, none */
+  animation-delay: 0.2s; /* or: Xms */
+  }
+  
+  @keyframes showIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.chatItemContentGuest {
+  background-color: #14286e;
+  color: white;
+  padding: 15px;
+  border-radius: 10px 10px 10px 0;
+  max-width: 50%;
+  min-width: auto;
+}
+
+.chatItemContentGuest .chatDate {
+  justify-content: space-between;
+  display: flex;
+  margin-top: 10px;
+}
+  
+.chatItemContentGuest .chatDate span {
+  font-size: 14px;
+  color: rgb(197, 194, 194);
+  user-select: none;
+}
+
+.writeText{
+  border:0.5px solid rgb(224, 224, 224);
+  background-color: white;
+  height: 4.05em;
+  width: 100%;
+  margin-top: auto;
+  padding: 1em;
+  box-shadow: inset 0 0 5px rgb(224, 224, 224)
+}
+
+.clickSend button{
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 1em;
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  color: #14286e;
+  margin-right: 8%;
+  transform: translateY(-100%);
+  cursor: pointer;
+}
+
+.clickChat button{
+  background-color: transparent;
+  border: 5px solid #14286e;
+  border-radius: 2em;
+  position: absolute;
+  right: 0;
+  margin-top: 0.5em;
+  background-color: #14286e;
+  color: white;
+  font-size: xx-large;
+  margin-right: 4%;
+  cursor: pointer;
+}
+
+/*scroll*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(224, 224, 224); 
+  border-radius: 10px;
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(199, 198, 198); 
+  border-radius: 10px;
+}
+
+:hover::-webkit-scrollbar-thumb {
+  background: rgb(179, 176, 176); 
+  border-radius: 10px;
+}
