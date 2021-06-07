@@ -46,79 +46,79 @@ const Chat = () => {
 
   function sendMessage(e) {
     e.preventDefault();
-    if(message !== ""){
+    if (message !== "") {
       const messageObject = {
         body: message,
         id: yourID,
       };
       setMessage("");
-      socketRef.current.emit("send message", messageObject);  
+      socketRef.current.emit("send message", messageObject);
     }
   }
 
   function handleChange(e) {
-      setMessage(e.target.value);
+    setMessage(e.target.value);
   }
 
   return (
     <div className="chatBox">
-    {state.isToggleOn ?
-    <Grid component={Paper} xs={12} style={{  boxShadow: 'inset 0 0 5px rgb(224, 224, 224)'}}>
-      <AppBar style={{background:'#14286e'}} position="static">
-        <Toolbar>
-          <Typography variant="h6" >
-            Czat
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <div className="contentBody">
-        {messages.map((message, index) => {
-          if (message.id === yourID) {
-            return (
-              <div className="chatMy" key={index}>
-                <div className="chatItemContentMy">
+      {state.isToggleOn ?
+        <Grid component={Paper} xs={12} style={{ boxShadow: 'inset 0 0 5px rgb(224, 224, 224)' }}>
+          <AppBar style={{ background: 'var(--color)' }} position="static">
+            <Toolbar>
+              <Typography variant="h6" >
+                Czat
+              </Typography>
+            </Toolbar>
+          </AppBar>
+          <div className="contentBody">
+            {messages.map((message, index) => {
+              if (message.id === yourID) {
+                return (
+                  <div className="chatMy" key={index}>
+                    <div className="chatItemContentMy">
+                      {message.body}
+                      <div className="chatDate">
+                        <span>16 min temu</span>
+                      </div>
+                    </div>
+                  </div>
+                )
+              }
+              return (
+                <div className="chatGuest" key={index}>
+                  <div className="chatItemContentGuest">
                     {message.body}
-                  <div className="chatDate">
-                    <span>16 min temu</span>
+                    <div className="chatDate">
+                      <span>16 min temu</span>
+                    </div>
+                  </div>
                 </div>
-                </div>
-              </div>
-            )
-          }
-          return (
-            <div className="chatGuest" key={index}>
-                <div className="chatItemContentGuest">
-                  {message.body}
-                  <div className="chatDate">
-                    <span>16 min temu</span>
-                </div>
-              </div>
+              )
+            })}
+          </div>
+          <Grid container>
+            <div className='writeText'>
+              <Grid item xs={11}>
+                <Form onSubmit={sendMessage}>
+                  <TextField
+                    value={message}
+                    onChange={handleChange}
+                    label="Napisz nową wiadomość..."
+                    fullWidth
+                  />
+                  <div className="clickSend">
+                    <button><SendIcon /></button>
+                  </div>
+                </Form>
+              </Grid>
             </div>
-          )
-        })}
-        </div>
-      <Grid container>
-      <div className='writeText'>
-          <Grid item xs={11}>
-            <Form onSubmit={sendMessage}>
-              <TextField
-                value={message} 
-                onChange={handleChange} 
-                label="Napisz nową wiadomość..." 
-                fullWidth
-              />
-              <div className="clickSend">
-                <button><SendIcon/></button>
-              </div>
-            </Form>
           </Grid>
-        </div>
-      </Grid> 
-      </Grid>
-      :null}
+        </Grid>
+        : null}
       <div className="clickChat">
         <button onClick={handleClick}>
-          {state.isToggleOn ? <ArrowDropDownIcon/> : <ChatBubbleOutlineIcon/>}
+          {state.isToggleOn ? <ArrowDropDownIcon /> : <ChatBubbleOutlineIcon />}
         </button>
       </div>
     </div>
