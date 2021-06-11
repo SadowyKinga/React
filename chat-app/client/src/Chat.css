@@ -211,23 +211,22 @@ svg.MuiSvgIcon-root{
 }
   
 .dot{
-  width: 2px;
-  height: 2px;
+  width: 4px;
+  height: 4px;
   background: var(--white);
   display: inline-block;
   border-radius: 50%;
   right: 0px;
   bottom: 0px;
-  margin: 0px 2.5px;
+  margin: 0px 2px;
 }
   
 .dots-cont:hover > .dot {
   position: relative;
   bottom: 0px;
-  animation-name: jump;
-  animation-duration: .3s;
+  animation-name: changeColor;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
   
 .dots-cont .dot-1{
@@ -236,21 +235,19 @@ svg.MuiSvgIcon-root{
 }
   
 .dots-cont .dot-2{
-  -webkit-animation-delay: 200ms;
-  animation-delay: 200ms;
-}
-  
-.dots-cont .dot-3{
   -webkit-animation-delay: 300ms;
   animation-delay: 300ms;
 }
-
-@keyframes jump {
-  from {bottom: 0px}
-  to {bottom: 4px}
+  
+.dots-cont .dot-3{
+  -webkit-animation-delay: 400ms;
+  animation-delay: 400ms;
 }
 
-@-webkit-keyframes jump {
-  from {bottom: 0px}
-  to {bottom: 4px}
+@keyframes changeColor  {
+  0% {background-color: var(--white);}
+  25% {background-color: var(--primary);}
+  50% {background-color: var(--white);}
+  75% {background-color: var(--primary);}
+  100% {background-color: var(--white);}
 }
