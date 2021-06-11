@@ -152,14 +152,13 @@ body{
 
 .clickChat button{
   background-color: transparent;
-  border: 5px solid var(--color);
+  border: 4px solid var(--color);
   border-radius: 2em;
   position: absolute;
   right: 0;
-  margin-top: 0.5em;
   background-color: var(--color);
   color: white;
-  font-size: xx-large;
+  font-size:x-large;
   margin-right: 4%;
   cursor: pointer;
 }
@@ -183,4 +182,65 @@ body{
 :hover::-webkit-scrollbar-thumb {
   background: rgb(179, 176, 176); 
   border-radius: 10px;
+}
+
+
+svg.MuiSvgIcon-root{
+  font-size: 1.5em;
+  margin-top: 0.2em;
+}
+
+/*animacja kropek*/
+.dots-cont{
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+  
+.dot{
+  width: 2px;
+  height: 2px;
+  background: white;
+  display: inline-block;
+  border-radius: 50%;
+  right: 0px;
+  bottom: 0px;
+  margin: 0px 2.5px;
+}
+  
+.dots-cont:hover > .dot {
+  position: relative;
+  bottom: 0px;
+  animation-name: jump;
+  animation-duration: .3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease;
+}
+  
+.dots-cont .dot-1{
+  -webkit-animation-delay: 100ms;
+  animation-delay: 100ms;
+}
+  
+.dots-cont .dot-2{
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms;
+}
+  
+.dots-cont .dot-3{
+  -webkit-animation-delay: 300ms;
+  animation-delay: 300ms;
+}
+
+@keyframes jump {
+  from {bottom: 0px}
+  to {bottom: 4px}
+}
+
+@-webkit-keyframes jump {
+  from {bottom: 0px}
+  to {bottom: 4px}
 }
