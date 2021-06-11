@@ -8,6 +8,7 @@ import TextField from '@material-ui/core/TextField';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import SendIcon from '@material-ui/icons/Send';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import CloseIcon from '@material-ui/icons/Close';
 import styled from "styled-components";
 import io from "socket.io-client";
 import "./Chat.css"
@@ -64,11 +65,12 @@ const Chat = () => {
     <div className="chatBox">
       {state.isToggleOn ?
         <Grid component={Paper} xs={12} style={{ boxShadow: 'inset 0 0 5px rgb(224, 224, 224)' }}>
-          <AppBar style={{ background: 'var(--color)' }} position="static">
+          <AppBar style={{ background: 'var(--primary)' }} position="static">
             <Toolbar>
               <Typography variant="h6" >
                 Czat
               </Typography>
+              <button className="CloseIcon" onClick={handleClick}><CloseIcon /></button>
             </Toolbar>
           </AppBar>
           <div className="contentBody">

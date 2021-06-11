@@ -1,5 +1,7 @@
 :root{
-  --color: #14286e;
+  --primary: #14286e;
+  --white: #fff;
+  --gray: #cdcdcd;
 }
 
 body{
@@ -15,6 +17,15 @@ body{
   padding-left: 0;
   width: 25%;
   bottom: 10%;
+}
+
+button.CloseIcon{
+  background: var(--primary);
+  color: var(--white);
+  border: var(--primary);
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
 }
 
 .contentBody {
@@ -54,8 +65,8 @@ body{
 }
 
 .chatItemContentMy {
-  background-color: var(--color);
-  color: #fff;
+  background-color: var(--primary);
+  color: var(--white);
   padding: 15px;
   border-radius: 10px 10px 0 10px;
   max-width: 50%;
@@ -71,7 +82,7 @@ body{
 
 .chatItemContentMy .chatDate span {
   font-size: 14px;
-  color: rgb(197, 194, 194);
+  color: var(--gray);
   user-select: none;
 }
 
@@ -107,8 +118,8 @@ body{
 }
 
 .chatItemContentGuest {
-  background-color: var(--color);
-  color: white;
+  background-color: var(--primary);
+  color: var(--white);
   padding: 15px;
   border-radius: 10px 10px 10px 0;
   max-width: 50%;
@@ -123,13 +134,13 @@ body{
   
 .chatItemContentGuest .chatDate span {
   font-size: 14px;
-  color: rgb(197, 194, 194);
+  color: var(--gray);
   user-select: none;
 }
 
 .writeText{
-  border:0.5px solid rgb(224, 224, 224);
-  background-color: white;
+  border:0.5px solid var(--gray);
+  background-color: var(--white);
   height: 4.05em;
   width: 100%;
   margin-top: auto;
@@ -144,7 +155,7 @@ body{
   position: absolute;
   right: 0;
   background-color: transparent;
-  color: var(--color);
+  color: var(--primary);
   margin-right: 8%;
   transform: translateY(-100%);
   cursor: pointer;
@@ -152,15 +163,16 @@ body{
 
 .clickChat button{
   background-color: transparent;
-  border: 4px solid var(--color);
+  border: 4px solid var(--primary);
   border-radius: 2em;
   position: absolute;
   right: 0;
-  background-color: var(--color);
-  color: white;
+  background-color: var(--primary);
+  color: var(--white);
   font-size:x-large;
   margin-right: 4%;
   cursor: pointer;
+  margin-top: 1em;
 }
 
 /*scroll*/
@@ -171,19 +183,18 @@ body{
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px rgb(224, 224, 224); 
   border-radius: 10px;
-  background: #f1f1f1; 
+  background: var(--white); 
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(199, 198, 198); 
+  background: var(--gray); 
   border-radius: 10px;
 }
 
 :hover::-webkit-scrollbar-thumb {
-  background: rgb(179, 176, 176); 
+  background: var(--gray); 
   border-radius: 10px;
 }
-
 
 svg.MuiSvgIcon-root{
   font-size: 1.5em;
@@ -202,7 +213,7 @@ svg.MuiSvgIcon-root{
 .dot{
   width: 2px;
   height: 2px;
-  background: white;
+  background: var(--white);
   display: inline-block;
   border-radius: 50%;
   right: 0px;
@@ -217,7 +228,6 @@ svg.MuiSvgIcon-root{
   animation-duration: .3s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-timing-function: ease;
 }
   
 .dots-cont .dot-1{
