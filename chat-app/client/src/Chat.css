@@ -1,15 +1,15 @@
-:root{
+:root {
   --primary: #14286e;
   --white: #fff;
   --gray: #cdcdcd;
 }
 
-body{
+body {
   font-family: 'Montserrat', sens-serif;
   height: 100%;
 }
 
-.chatBox{
+.chatBox {
   position: absolute;
   right: 1%;
   margin: auto;
@@ -19,7 +19,7 @@ body{
   bottom: 10%;
 }
 
-button.CloseIcon{
+button.CloseIcon {
   background: var(--primary);
   color: var(--white);
   border: var(--primary);
@@ -53,7 +53,7 @@ button.CloseIcon{
   ); /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
   animation-fill-mode: both; /* or: backwards, both, none */
   animation-delay: 0.2s; /* or: Xms */
-  }
+}
   
 @keyframes showIn {
   0% {
@@ -86,7 +86,7 @@ button.CloseIcon{
   user-select: none;
 }
 
-.chatGuest{
+.chatGuest {
   padding: 1em;
   display: flex;
   justify-content: flex-start;
@@ -106,9 +106,9 @@ button.CloseIcon{
   ); /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
   animation-fill-mode: both; /* or: backwards, both, none */
   animation-delay: 0.2s; /* or: Xms */
-  }
+}
   
-  @keyframes showIn {
+@keyframes showIn {
   0% {
     transform: scale(0);
   }
@@ -138,7 +138,7 @@ button.CloseIcon{
   user-select: none;
 }
 
-.writeText{
+.writeText {
   border:0.5px solid var(--gray);
   background-color: var(--white);
   height: 4.05em;
@@ -148,7 +148,7 @@ button.CloseIcon{
   box-shadow: inset 0 0 5px rgb(224, 224, 224)
 }
 
-.clickSend button{
+.clickSend button {
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 1em;
@@ -161,7 +161,7 @@ button.CloseIcon{
   cursor: pointer;
 }
 
-.clickChat button{
+.clickChat button {
   background-color: transparent;
   border: 4px solid var(--primary);
   border-radius: 2em;
@@ -196,13 +196,13 @@ button.CloseIcon{
   border-radius: 10px;
 }
 
-svg.MuiSvgIcon-root{
+svg.MuiSvgIcon-root {
   font-size: 1.5em;
   margin-top: 0.2em;
 }
 
 /*animacja kropek*/
-.dots-cont{
+.dots-cont {
   position: absolute;
   top:0;
   left: 0;
@@ -210,7 +210,7 @@ svg.MuiSvgIcon-root{
   width: 100%;
 }
   
-.dot{
+.dot {
   width: 4px;
   height: 4px;
   background: var(--white);
@@ -229,17 +229,17 @@ svg.MuiSvgIcon-root{
   animation-iteration-count: infinite;
 }
   
-.dots-cont .dot-1{
+.dots-cont .dot-1 {
   -webkit-animation-delay: 100ms;
   animation-delay: 100ms;
 }
   
-.dots-cont .dot-2{
+.dots-cont .dot-2 {
   -webkit-animation-delay: 300ms;
   animation-delay: 300ms;
 }
   
-.dots-cont .dot-3{
+.dots-cont .dot-3 {
   -webkit-animation-delay: 400ms;
   animation-delay: 400ms;
 }
