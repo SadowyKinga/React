@@ -64,7 +64,7 @@ const Chat = () => {
   return (
     <div className="chatBox">
       {state.isToggleOn ?
-        <Grid component={Paper} xs={12} style={{ boxShadow: 'inset 0 0 5px rgb(224, 224, 224)' }}>
+        <Grid component={Paper} item xs={12} style={{ boxShadow: 'inset 0 0 5px rgb(224, 224, 224)' }}>
           <AppBar style={{ background: 'var(--primary)' }} position="static">
             <Toolbar>
               <Typography variant="h6" >
