@@ -156,7 +156,7 @@ button.CloseIcon{
   right: 0;
   background-color: transparent;
   color: var(--primary);
-  margin-right: 8%;
+  margin-right: 1.5rem;
   transform: translateY(-100%);
   cursor: pointer;
 }
@@ -170,7 +170,7 @@ button.CloseIcon{
   background-color: var(--primary);
   color: var(--white);
   font-size:x-large;
-  margin-right: 4%;
+  margin-right: 1rem;
   cursor: pointer;
   margin-top: 1em;
 }
@@ -244,10 +244,22 @@ svg.MuiSvgIcon-root{
   animation-delay: 400ms;
 }
 
-@keyframes changeColor  {
+@keyframes changeColor {
   0% {background-color: var(--white);}
   25% {background-color: var(--primary);}
   50% {background-color: var(--white);}
   75% {background-color: var(--primary);}
   100% {background-color: var(--white);}
+}
+
+@media screen and (max-width: 992px) {
+  label.MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated{
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  label.MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated{
+    font-size: 0.5em;
+  }
 }
